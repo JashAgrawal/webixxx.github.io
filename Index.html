@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sasta wix</title>
+    <link rel="stylesheet" href="css/my.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1170px)"
+      href="css/phone.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="jqueris/jquery-ui.min.js"></script>
+    <script src="jqueris/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jqueris/jquery-ui.min.css" />
+    <link rel="stylesheet" href="jqueris/jquery-ui.css" />
+    <link rel="stylesheet" href="jqueris/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="jqueris/jquery-ui.theme.css" />
+    <style>/* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        /* resize: both; */
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* CSS Variables */
+      :root {
+        --navbar-height: 59px;
+      }
+      
+      /* Navigation Bar */
+      #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+      }
+      
+      #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+      }
+      
+      /* Navigation Bar: Logo and Image */
+      #logo {
+        margin: 10px 34px;
+      }
+      
+      #logo img {
+        height: 59px;
+        margin: 3px 6px;
+      }
+      
+      /* Navigation Bar: List Styling */
+      
+      #navbar ul {
+        display: flex;
+        font-family: "Baloo Bhai", cursive;
+      }
+      
+      #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+      }
+      
+      #navbar ul li a {
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      
+      #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+      }
+      
+      /* Home Section */
+      #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      #home::before {
+        content: "";
+        position: absolute;
+        background: url("./img/bg1.jpg") no-repeat center center/cover;
+        height: 642px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+      }
+      
+      #home h1 {
+        color: white;
+        text-align: center;
+        font-family: "Bree Serif", serif;
+      }
+      
+      #home p {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "Bree Serif", serif;
+      }
+      /* Services Section */
+      #services {
+        margin: 34px;
+        display: flex;
+      }
+      #services .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+      }
+      
+      #services .box img {
+        height: 160px;
+        margin: auto;
+        display: block;
+      }
+      
+      #services .box p {
+        font-family: "Bree Serif", serif;
+      }
+      
+      /* Clients Section */
+      #client-section {
+        position: relative;
+      }
+      
+      #client-section::before {
+        content: "";
+        position: absolute;
+        background: url("img/bg1.jpg");
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.3;
+      }
+      
+      #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .client-item {
+        padding: 34px;
+      }
+      
+      #clients img {
+        height: 124px;
+      }
+      
+      /* Contact Section */
+      #contact {
+        position: relative;
+      }
+      #contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background: url("../contact.jpg") no-repeat center center/cover;
+      }
+      #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+      }
+      #contact-box input,
+      #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+      }
+      
+      #contact-box form {
+        width: 40%;
+      }
+      
+      #contact-box label {
+        font-size: 1.3rem;
+        font-family: "Bree Serif", serif;
+      }
+      
+      footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+      }
+      
+      /* Utility Classes */
+      .h-primary {
+        font-family: "Bree Serif", serif;
+        font-size: 3.8rem;
+        padding: 12px;
+      }
+      
+      .h-secondary {
+        font-family: "Bree Serif", serif;
+        font-size: 2.3rem;
+        padding: 12px;
+      }
+      
+      .btn1 {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      
+      .center {
+        text-align: center;
+      }
+      
+      #icon {
+        border: 2px;
+        margin-left: 2px;
+        justify-content: left;
+      }
+      #inp {
+        width: 50px;
+        height: 50px;
+        justify-content: left;
+        align-self: left;
+      }
+      .inpclass {
+        position: sticky;
+        width: 50px;
+        height: 50px;
+        justify-content: left;
+        align-self: left;
+        margin-top: 10px;
+        z-index: 100;
+      }
+      #body {
+        background: white;
+      }
+      #addmenu {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: sticky;
+        left: 0px;
+      }
+      #addmenu ul {
+        display: flex;
+        font-family: "Baloo Bhai", cursive;
+        flex-direction: column;
+        padding: auto;
+      }
+      #addmenu ul li {
+        list-style: none;
+        font-size: 1rem;
+      }
+      #addmenu::before {
+        content: "";
+        background-color: cornflowerblue;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        border-radius: 1em;
+      }
+      #addmenu ul li a {
+        color: white;
+        display: block;
+        padding: auto;
+        padding-left: 5px;
+        border-radius: 20px;
+        text-decoration: none;
+        width: 5em;
+      }
+      #addmenu ul li a:hover {
+        color: black;
+        background-color: white;
+      }
+      .option {
+        display: flex;
+        margin: 10px 10px 10px 10px;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+      }
+      #bgdiv {
+        position: sticky;
+      }
+      .input {
+        border-radius: 20px;
+        width: 200px;
+        height: 30px;
+        font-size: 21px;
+        margin-left: 0px;
+        margin-right: 90px;
+        left: 0px;
+      }
+      select {
+        font-size: 21px;
+      }
+      .right-clk_btn {
+        width: 50px;
+        height: 50px;
+        margin: 50px 5px 5px 5px;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      #cpybut {
+        background: url("../img/cpy.png") no-repeat center center/cover;
+      }
+      #delbut {
+        background: url("../img/del.png") no-repeat center center/cover;
+      }
+      #moretools {
+        border-radius: 20px;
+        background-color: rgb(51, 79, 204);
+        color: white;
+        font-size: 16px;
+        padding: 3px 10px 3px 10px;
+        margin: 3px 10px 3px 10px;
+        font-family: monospace;
+      }
+      #bigX {
+        cursor: pointer;
+        justify-self: left;
+      }
+      .myhover:hover {
+        cursor: pointer;
+        border: cornflowerblue;
+        border-radius: 20px;
+        background: rgb(151, 144, 253);
+      }
+      </style>
+  </head>
+  
+  <body id="body1">
+    <nav id="navbar">
+      <div id="logo" onmouseover="store_id(this.id)">
+        <img id="img1" src =
+        "img/logo.png"
+        >
+      </div>
+      <ul>
+        <li class="item" >
+          <a id="nave1" onmouseover="store_id(this.id)" href="#home"> home</a>
+        </li>
+        <li class="item">
+          <a id="nave2" onmouseover="store_id(this.id)" href="#temp">temp</a>
+        </li>
+        <li class="item">
+          <a id="nave3"  onmouseover="store_id(this.id)" href="#about">about us</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="bgdiv">
+      <div class="inpclass" id="inp">
+        <img
+          src="img/chbg.jpg"
+          id="icon"
+          width="50px"
+          height="50px"
+          style="border-radius: 50%"
+          onclick="changeimg()"
+        />
+      </div>
+    </div>
+    <div id="adddiv">
+      <div class="inpclass" id="adbtn">
+        <img
+          src="https://www.freeiconspng.com/uploads/add-icon--icon-search-engine-1.png"
+          id="adbtnicon"
+          width="50px"
+          height="50px"
+          style="border-radius: 50%"
+          onclick="add_menu()"
+        />
+      </div>
+      
+    </div>
+    <div class="inpclass" id="inp">
+      <img
+        src="img/save.ico"
+        id="saveme"
+        width="50px"
+        height="50px"
+        style="border-radius: 50%;background-color: white;"
+      />
+    </div>
+    <img
+        src="img/reset.png"
+        id="resetme"
+        width="50px"
+        height="50px"
+        style="border-radius: 50%;background-color: white;"
+        onclick="reset()"
+        />
+    <!-- <button id ="loadme" onclick="dom_loc()" >load</button> -->
+    <!-- <button id ="delete"  >delete</button> -->
+      
+
+      <section id="home">
+        <!-- ondblclick="changeimg(this.id)"-->
+
+        <h1 class="h-primary" id="heading" onmouseover="store_id(this.id)">Welcome to MyOnlineMeal</h1>
+
+        <p id="p1" onmouseover="store_id(this.id)">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
+          dolorum numquam minus.
+        </p>
+        <p id="p2" onmouseover="store_id(this.id)">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <button class="btn" id="b1" onmouseover="store_id(this.id)">
+          Order Now
+        </button>
+      </section>
+
+      <section id="services-container">
+        <h1 class="h-primary center" style="text-align: center">
+          Our Services
+        </h1>
+        <div id="services">
+          <div class="box" onkeypress="">
+            <img src="img/1.png" alt="" />
+            <h2 class="h-secondary center">Food Catering</h2>
+            <p class="center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem,
+              culpa suscipit error Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Et qui, repudiandae similique nam, recusandae
+              quidem ab asperiores ex, aut fugit labore veritatis facere? sint
+              delectus ab dolorum nam. Debitis facere, incidunt voluptates eos,
+              mollitia voluptatem iste sunt voluptas beatae facilis labore,
+              omnis sint quae eum.
+            </p>
+          </div>
+          <div class="box">
+            <img src="img/2.png" alt="" />
+            <h2 class="h-secondary center">Bulk Ordering</h2>
+            <p class="center" >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem,
+              culpa suscipit error Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Unde laudantium a incidunt animi ad, ab
+              dignissimos vero? Unde numquam odit repudiandae perferendis nisi.
+              sint delectus ab dolorum nam. Debitis facere, incidunt voluptates
+              eos, mollitia voluptatem iste sunt voluptas beatae facilis labore,
+              omnis sint quae eum.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="javascipts/main.js"></script>
+
+    
+  </body>
+</html>
